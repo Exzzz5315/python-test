@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="面向零基础前端工程师的 28 天 Python 本地进阶课堂" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Python 进阶小课堂</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#lesson">跳到课程内容</a>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="返回课程首页">
+        <span class="brand-mark" aria-hidden="true">Py</span>
+        <span>
+          <strong>Python 进阶小课堂</strong>
+          <small>从零基础到业务开发的 28 天路线</small>
+        </span>
+      </a>
+
+      <div class="topbar-actions">
+        <label class="mobile-day-picker">
+          <span class="sr-only">选择课程</span>
+          <select id="day-picker" aria-label="选择课程"></select>
+        </label>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="切换明暗主题">主题</button>
+        <button class="quiet-button" id="reset-progress" type="button">重置进度</button>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <aside class="course-nav" aria-label="课程目录">
+        <div class="course-summary">
+          <p class="section-label">你的课程</p>
+          <div class="progress-copy">
+            <strong id="progress-count">0 / 28</strong>
+            <span id="progress-percent">0% 已完成</span>
+          </div>
+          <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+        </div>
+        <nav id="course-list"></nav>
+      </aside>
+
+      <main id="lesson" class="lesson" tabindex="-1" aria-live="polite"></main>
+
+      <aside class="study-panel" aria-label="学习辅助">
+        <section>
+          <p class="section-label">今日节奏</p>
+          <ol class="time-plan" id="time-plan"></ol>
+        </section>
+
+        <section class="score-section">
+          <p class="section-label">掌握情况</p>
+          <p class="score-value" id="score-value">尚未测验</p>
+          <p class="score-note" id="score-note">完成随堂题后，这里会显示薄弱知识点。</p>
+        </section>
+
+        <section>
+          <p class="section-label">学习提示</p>
+          <p class="study-tip" id="study-tip">先读示例，再关掉答案亲手写一遍。</p>
+        </section>
+      </aside>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="/course-data.js"></script>
+    <script src="/lesson-details.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

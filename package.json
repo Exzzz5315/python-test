@@ -1,0 +1,13 @@
+{
+  "name": "python-path-classroom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "面向前端工程师的 28 天 Python 本地小课堂",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/course-data.js && node --check public/lesson-details.js && node --check public/app.js && node verify.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
